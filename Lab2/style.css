@@ -1,0 +1,165 @@
+/* =========================================
+   ЗАГАЛЬНІ СТИЛІ
+   ========================================= */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h2 {
+    margin-top: 40px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+
+/* =========================================
+   ЗАВДАННЯ 1: СТИЛІ ТАБЛИЦІ
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+
+td {
+    border: 2px solid #000000;
+    padding: 12px 6px;
+    vertical-align: middle;
+    height: 35px;
+}
+
+.col-left-1 { width: 27.5%; }
+.col-left-2 { width: 27.5%; }
+.col-mid    { width: 22.5%; }
+.col-right  { width: 22.5%; }
+
+.row-1 {
+    background-color: #078f8f;
+    color: #ffffff;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.row-2 {
+    background-color: #f5f507;
+    color: #000000;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+/* Hover-ефекти для таблиці */
+.row-1:hover {
+    background-color: #f5f507;
+    color: #000000;
+}
+
+.row-2:hover {
+    background-color: #078f8f;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   ЗАВДАННЯ 2: СТИЛІ ЗОБРАЖЕНЬ (Годинники)
+   ========================================= */
+.container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap; /* Дозволяє блокам переноситись на менших екранах */
+}
+
+.clock-wrapper {
+    text-align: center;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border: 2px solid #000;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.dot {
+    width: 26px;
+    height: 26px;
+    background-color: red;
+    border: 2px solid #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.hand {
+    background-color: #000;
+}
+
+/* -------------------------------------
+   МЕТОД 1: POSITION
+   ------------------------------------- */
+.clock-position {
+    position: relative;
+}
+
+.clock-position .dot, 
+.clock-position .hand {
+    position: absolute;
+}
+
+.clock-position .top { top: 15px; left: 87px; }
+.clock-position .bottom { bottom: 15px; left: 87px; }
+.clock-position .left { top: 87px; left: 15px; }
+.clock-position .right { top: 87px; right: 15px; }
+
+.clock-position .vertical {
+    width: 8px;
+    height: 100px;
+    top: 25px;
+    left: 96px;
+}
+
+.clock-position .horizontal {
+    width: 85px;
+    height: 8px;
+    top: 96px; 
+    left: 80px;
+}
+
+/* -------------------------------------
+   МЕТОД 2: TRANSFORM
+   ------------------------------------- */
+.clock-transform {
+    position: relative; 
+}
+
+.clock-transform .center-base {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.clock-transform .dot {
+    margin-left: -13px; /* Компенсація половини ширини для точного центру */
+    margin-top: -13px;
+}
+
+.clock-transform .dot-12 { transform: translateY(-72px); }
+.clock-transform .dot-6  { transform: translateY(72px); }
+.clock-transform .dot-9  { transform: translateX(-72px); }
+.clock-transform .dot-3  { transform: translateX(72px); }
+
+.clock-transform .hand-v {
+    width: 8px;
+    height: 100px;
+    transform: translate(-4px, -75px);
+}
+
+.clock-transform .hand-h {
+    width: 85px;
+    height: 8px;
+    transform: translate(-20px, -4px); 
+}

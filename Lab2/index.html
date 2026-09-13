@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2 - Варіант 7</title>
+    <!-- Підключення зовнішнього файлу зі стилями -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Завдання 1: Таблиця (Варіант 7)</h2>
+    <table>
+        <!-- Фіксація ширини стовпчиків -->
+        <colgroup>
+            <col class="col-left-1">
+            <col class="col-left-2">
+            <col class="col-mid">
+            <col class="col-right">
+        </colgroup>
+
+        <!-- 1-й рядок: ПІБ -->
+        <tr class="row-1">
+            <td rowspan="2" colspan="2">Михаць</td>
+            <td>Роман</td>
+            <td>Андрійович</td>
+        </tr>
+
+        <!-- 2-й рядок: Група, Номер ЛР та Номер варіанту -->
+        <tr class="row-2">
+            <td>Група: ІО-44</td>
+            <td>ЛР №2, Варіант №7</td>
+        </tr>
+
+        <!-- 3-й рядок -->
+        <tr>
+            <td colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td rowspan="2">&nbsp;</td>
+        </tr>
+
+        <!-- 4-й рядок -->
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+
+    <h2>Завдання 2: Зображення (Варіант 7)</h2>
+    <div class="container">
+        <!-- 1. Реалізація за допомогою властивості POSITION -->
+        <div class="clock-wrapper">
+            <h3>1. За допомогою Position</h3>
+            <div class="clock clock-position">
+                <div class="dot top"></div>
+                <div class="dot right"></div>
+                <div class="dot bottom"></div>
+                <div class="dot left"></div>
+                <div class="hand vertical"></div>
+                <div class="hand horizontal"></div>
+            </div>
+        </div>
+
+        <!-- 2. Реалізація за допомогою властивості TRANSFORM -->
+        <div class="clock-wrapper">
+            <h3>2. За допомогою Transform</h3>
+            <div class="clock clock-transform">
+                <!-- Всі елементи стартують з центру для подальшого зсуву -->
+                <div class="dot center-base dot-12"></div>
+                <div class="dot center-base dot-3"></div>
+                <div class="dot center-base dot-6"></div>
+                <div class="dot center-base dot-9"></div>
+                <div class="hand center-base hand-v"></div>
+                <div class="hand center-base hand-h"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
