@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Класи для зміни кольору (Завдання 1) */
+.color-state-1 {
+    background-color: #0d47a1; /* Темно-синій */
+    color: #ffffff;            /* Білий текст */
+}
+
+.color-state-2 {
+    background-color: #2e7d32; /* Темно-зелений */
+    color: #ffffff;            /* Білий текст */
+}
+
+/* Відступи для кнопок (Завдання 2) */
+#controls {
+    margin-top: 15px;
+}
+
+#controls button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
