@@ -29,7 +29,7 @@ const btnIncrease = document.getElementById('increase-btn');
 const btnDecrease = document.getElementById('decrease-btn');
 const btnRemove = document.getElementById('remove-btn');
 
-// Посилання на твоє фото
+// Посилання на фото
 const defaultImageSrc = "https://localhistory.org.ua/media/images/drogobych_tekst-2-1024x767.max-1920x900.format-webp.webp";
 
 // Додати зображення
